@@ -1,11 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Gatsby WP Test`,
+    description: `Gatsby with wordpress test project`,
+    author: `prince b`,
   },
   plugins: [
+    {
+		  resolve: "gatsby-source-graphql",
+		  options: {
+			  typeName: "WPGraphQL",
+			  fieldName: "wpcontent",
+			  url: "https://pixldinc.com/graphql",
+		  },
+	  },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -31,6 +38,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

@@ -27,6 +27,31 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+
+      <div>
+      <Link
+          to="/blog"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+          activeClassName='current-page'
+        >
+          Blog
+        </Link>
+
+        <Link
+          to="/about"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+            marginLeft: `1rem`
+          }}
+          activeClassName='current-page'
+        >
+          About
+        </Link>
+      </div>
     </div>
   </header>
 )
